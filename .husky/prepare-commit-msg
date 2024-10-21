@@ -1,0 +1,2 @@
+exec < /dev/tty
+pnpm exec prepare-commit ${1}
