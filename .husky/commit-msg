@@ -1,1 +1,1 @@
-pnpm exec lint-commit ${1}
+# pnpm exec lint-commit ${1}

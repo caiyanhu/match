@@ -4,7 +4,7 @@ export default {
     autoprefixer: {},
     "postcss-px-to-viewport-8-plugin": {
       unitToConvert: "px",
-      viewportWidth: 393,
+      viewportWidth: 1920,
       unitPrecision: 5,
       propList: ["*"],
       viewportUnit: "vw",
@@ -17,7 +17,7 @@ export default {
       include: undefined,
       landscape: false,
       landscapeUnit: "vw",
-      landscapeWidth: 568,
+      landscapeWidth: 1920,
     },
   },
 };

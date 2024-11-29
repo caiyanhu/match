@@ -1,39 +1,46 @@
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
+import { ref } from 'vue'
+import { useModal } from 'vue-final-modal'
 
-import { HomeBottom, HomeMiddle, HomeTop, MessagePopup } from "@/components";
-import { useMiscStore } from "@/store";
+import AutoAnimateTest from '@/components/AutoAnimateTest.vue';
+import Modal from '@/components/Modal.vue';
 
-const miscStore = useMiscStore();
-const { isMessagePopupVisible, popupContent } = storeToRefs(miscStore);
+import CountDown from '../components/CountDown.vue';
+import SoundTest from '../components/SoundTest.vue'
 
-// 关闭错误信息弹窗
-const closeMessagePopup = () => {
-  miscStore.$patch((state) => {
-    state.isMessagePopupVisible = false;
-  });
-};
+const onTimeEnd = () => {
+}
 
-// 禁止显示右键菜单
-document.addEventListener(
-  "contextmenu",
-  function (event: MouseEvent | TouchEvent) {
-    event.preventDefault();
+const { open } = useModal({
+  component: Modal,
+  attrs: {
+    title: 'Hello World!',
   },
-);
+  slots: {
+    default: '<p>The content of the modal</p>',
+  },
+})
 </script>
 
 <template>
   <div class="wrapper bg-home">
-    <HomeTop />
-    <HomeMiddle />
-    <HomeBottom />
-    <MessagePopup
-      @close="closeMessagePopup"
-      :message="popupContent"
-      :duration="1.5"
-      :visible="isMessagePopupVisible" />
+    <SoundTest></SoundTest>
+
+    <div class="animate-fade-up animate-infinite">
+      Hej, look at me!
+    </div>
+
+    <CountDown @timeEnd="onTimeEnd"></CountDown>
+
+    <AutoAnimateTest></AutoAnimateTest>
+
+    <button @click="() => open()">Open</button>
+
+    <!-- <div class="test bg-18" style="width: 46px;  height: 52px;"></div>
+    <div class="test bg-182"></div> -->
   </div>
+
+
 </template>
 
 <style lang="scss" scoped>
@@ -41,6 +48,13 @@ document.addEventListener(
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+}
+
+.test {
+  width: 46px;
+  height: 52px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 </style>
