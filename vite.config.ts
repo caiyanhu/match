@@ -8,6 +8,9 @@ import svgLoader from "vite-svg-loader";
 
 export default defineConfig({
   // base: "/haishan-ai/",
+  define: {
+    'process.env': {}
+  },
   plugins: [
     vue(),
     svgLoader({

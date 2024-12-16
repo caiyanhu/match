@@ -6,7 +6,8 @@ import AutoAnimateTest from '@/components/AutoAnimateTest.vue';
 import Modal from '@/components/Modal.vue';
 
 import CountDown from '../components/CountDown.vue';
-import SoundTest from '../components/SoundTest.vue'
+import SoundTest from '../components/SoundTest.vue';
+import Excalidraw from '../components/Excalidraw.vue';
 
 const onTimeEnd = () => {
 }
@@ -23,8 +24,10 @@ const { open } = useModal({
 </script>
 
 <template>
-  <div class="wrapper bg-home">
-    <SoundTest></SoundTest>
+  <div class="wrapper bg-home1">
+    <Excalidraw></Excalidraw>
+
+    <!-- <SoundTest></SoundTest>
 
     <div class="animate-fade-up animate-infinite">
       Hej, look at me!
@@ -34,7 +37,7 @@ const { open } = useModal({
 
     <AutoAnimateTest></AutoAnimateTest>
 
-    <button @click="() => open()">Open</button>
+    <button @click="() => open()">Open</button> -->
 
     <!-- <div class="test bg-18" style="width: 46px;  height: 52px;"></div>
     <div class="test bg-182"></div> -->

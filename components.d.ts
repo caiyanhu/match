@@ -12,6 +12,7 @@ declare module 'vue' {
     AutoAnimateTest: typeof import('./src/components/AutoAnimateTest.vue')['default']
     copy: typeof import('./src/components/SoundTest copy.vue')['default']
     CountDown: typeof import('./src/components/CountDown.vue')['default']
+    Excalidraw: typeof import('./src/components/Excalidraw.vue')['default']
     HomeBottom: typeof import('./src/components/HomeBottom/index.vue')['default']
     HomeMiddle: typeof import('./src/components/HomeMiddle/index.vue')['default']
     HomeTop: typeof import('./src/components/HomeTop/index.vue')['default']
