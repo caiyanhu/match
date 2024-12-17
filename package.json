@@ -13,6 +13,7 @@
     "@chenfengyuan/vue-countdown": "^2.1.2",
     "@excalidraw/excalidraw": "^0.17.6",
     "@formkit/auto-animate": "^0.8.2",
+    "@multiavatar/multiavatar": "^1.0.7",
     "@vueuse/sound": "^2.0.1",
     "ant-design-vue": "4.x",
     "axios": "^1.7.7",

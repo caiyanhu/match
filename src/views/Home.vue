@@ -3,29 +3,27 @@ import { ref } from 'vue'
 import { useModal } from 'vue-final-modal'
 
 import AutoAnimateTest from '@/components/AutoAnimateTest.vue';
-import Modal from '@/components/Modal.vue';
+import RankModal from '@/components/RankModal.vue';
+import GuoguanModal from '@/components/GuoguanModal.vue';
 
 import CountDown from '../components/CountDown.vue';
 import SoundTest from '../components/SoundTest.vue';
 import Excalidraw from '../components/Excalidraw.vue';
+import DaojuModal from '../components/DaojuModal.vue';
 
 const onTimeEnd = () => {
 }
 
 const { open } = useModal({
-  component: Modal,
-  attrs: {
-    title: 'Hello World!',
-  },
-  slots: {
-    default: '<p>The content of the modal</p>',
-  },
+  // component: RankModal
+  component: GuoguanModal
+  // component: DaojuModal
 })
 </script>
 
 <template>
   <div class="wrapper bg-home1">
-    <Excalidraw></Excalidraw>
+    <!-- <Excalidraw></Excalidraw> -->
 
     <!-- <SoundTest></SoundTest>
 
@@ -35,9 +33,9 @@ const { open } = useModal({
 
     <CountDown @timeEnd="onTimeEnd"></CountDown>
 
-    <AutoAnimateTest></AutoAnimateTest>
+    <AutoAnimateTest></AutoAnimateTest> -->
 
-    <button @click="() => open()">Open</button> -->
+    <button @click="() => open()">Open</button>
 
     <!-- <div class="test bg-18" style="width: 46px;  height: 52px;"></div>
     <div class="test bg-182"></div> -->
