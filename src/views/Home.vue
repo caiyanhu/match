@@ -18,11 +18,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useModal } from 'vue-final-modal';
 
 import RankModal from '@/components/RankModal.vue';
 import DaojuModal from '@/components/DaojuModal.vue';
+
+import { getMapInfo } from "@/apis/index";
 
 const onOpenRankModal = () => {
   const { open } = useModal({
@@ -40,6 +42,11 @@ const onOpenDaojuModal = () => {
   open();
 }
 
+onMounted(async () => {
+  const res = await getMapInfo(1, 1, 1);
+  console.log(res);
+});
+
 </script>
 
 
@@ -48,12 +55,5 @@ const onOpenDaojuModal = () => {
 .wrapper {
   width: 100vw;
   height: 100vh;
-}
-
-.test {
-  width: 46px;
-  height: 52px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 </style>

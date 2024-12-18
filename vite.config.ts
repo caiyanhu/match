@@ -31,13 +31,15 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      "/stream": {
-        target: "http://nls-gateway-cn-shanghai.aliyuncs.com",
+      "/apps/v1": {
+        target: "https://apifoxmock.com/m1/5326416-0-default",
         changeOrigin: true,
       },
-      "/chat": {
-        target: "http://36.212.55.183:7862",
+      "/haishan-ai": {
+        // target: "https://apifoxmock.com/m1/5326416-0-default",
+        target: "http://1.15.247.75",
         changeOrigin: true,
+        // rewrite: (path) => path.replace(/^\/haishan-ai/, ""),
       },
     },
   },

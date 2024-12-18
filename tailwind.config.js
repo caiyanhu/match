@@ -12,6 +12,15 @@ export default {
         pve: "url(/images/pve.png)",
         pvp: "url(/images/pvp.png)",
 
+        waitroom_bg: "url(/images/waitroom_bg.png)",
+        right_panel:  "url(/images/right_panel.png)",
+        back: "url(/images/back.png)",
+        pvp_title: "url(/images/pvp_title.png)",
+        wait_react: "url(/images/wait_react.png)",
+        empty_avatar: "url(/images/empty_avatar.png)",
+
+        start_game: "url(/images/start_game.png)",
+
         countdown_bg: "url(/images/countdown_bg.png)",
         countdown_clock: "url(/images/countdown_clock.png)",
 
