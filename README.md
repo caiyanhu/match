@@ -1,3 +1,11 @@
-# custom_config_loader
+# 部署
+```
+cd /home/lighthouse/deploy/haishan-ai
 
-前端设计组custom_config_loader插件
+sudo docker build -t haishan-ai:1.0.0 .
+
+sudo docker ps |grep 8999
+sudo docker stop <容器id>
+sudo docker rm -f <容器id>
+sudo docker run -d -p 8999:80 haishan-ai:1.0.0
+```
