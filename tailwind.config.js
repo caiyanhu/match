@@ -4,9 +4,13 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        home: "url(/images/home_background@2x.png)",
-        18: "url(/images/18.png)",
-        182: "url(/images/18@2x.png)",
+        home_bg: "url(/images/home_bg.png)",
+        paihangbang: "url(/images/paihangbang.png)",
+        baoxiang: "url(/images/baoxiang.png)",
+        logo: "url(/images/logo.png)",
+        home_title: "url(/images/home_title.png)",
+        pve: "url(/images/pve.png)",
+        pvp: "url(/images/pvp.png)",
 
         countdown_bg: "url(/images/countdown_bg.png)",
         countdown_clock: "url(/images/countdown_clock.png)",
