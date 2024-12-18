@@ -36,6 +36,7 @@ const { open } = useModal({
     <AutoAnimateTest></AutoAnimateTest> -->
 
     <button @click="() => open()">Open</button>
+    <CountDown @timeEnd="onTimeEnd"></CountDown>
 
     <!-- <div class="test bg-18" style="width: 46px;  height: 52px;"></div>
     <div class="test bg-182"></div> -->
