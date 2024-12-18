@@ -1,19 +1,20 @@
 import path from "node:path";
 
 import vue from "@vitejs/plugin-vue";
+import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
+import Components from "unplugin-vue-components/vite";
 import { defineConfig } from "vite";
-import Components from 'unplugin-vue-components/vite';
-import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 import svgLoader from "vite-svg-loader";
 
 export default defineConfig({
   // base: "/haishan-ai/",
   define: {
-    'process.env': {}
+    "process.env": {},
   },
   plugins: [
     vue(),
     svgLoader({
+      defaultImport: "component",
       svgo: false,
     }),
     Components({
