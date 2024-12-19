@@ -34,7 +34,7 @@ onUnmounted(() => {
   }
 });
 
-// 模拟更新自己的游戏进度（这里简单定时更新，实际根据游戏逻辑触发）
+// 更新自己的游戏进度：当前关卡、积分数
 setInterval(() => {
   myProgress.value += Math.floor(Math.random() * 10);
   if (myProgress.value > 100) {

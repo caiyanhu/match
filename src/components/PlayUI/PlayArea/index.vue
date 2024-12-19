@@ -1,57 +1,52 @@
 <script lang="ts" setup>
-import AffixIcon from "./assets/affix.svg";
+import { computed } from "vue";
+
+import Road from "@/components/PlayUI/Road/index.vue";
+
+const props = defineProps({
+  number: {
+    required: true,
+    type: Number,
+  },
+  boxNumberPerLine: {
+    required: true,
+    type: Number,
+  },
+});
+// 通过数量确定行数
+const lineNumber = computed(() => {
+  return Math.ceil(props.number / props.boxNumberPerLine);
+});
 </script>
 
 <template>
   <div class="play-area">
-    <div class="left-top">
-      <AffixIcon />
-    </div>
-    <div class="right-top">
-      <AffixIcon />
-    </div>
-    <div class="left-bottom">
-      <AffixIcon />
-    </div>
-    <div class="right-bottom">
-      <AffixIcon />
+    <div class="main-area">
+      <Road
+        :rowNumber="props.boxNumberPerLine"
+        v-for="index in lineNumber"
+        :key="index"></Road>
     </div>
   </div>
 </template>
 
 <style lang="css" scoped>
 .play-area {
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 800px;
-  height: 800px;
-  border-radius: 12px;
+  background-image: url("./assets/play-area-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1341px;
+  height: 610px;
+  overflow-y: auto;
 
   position: absolute;
-  top: 189px;
-  left: 567px;
+  top: 125px;
+  left: 80px;
 
-  .left-top {
-    position: absolute;
-    top: 25px;
-    left: 28px;
-  }
+  padding: 60px 28px;
 
-  .left-bottom {
-    position: absolute;
-    bottom: 25px;
-    left: 28px;
-  }
-
-  .right-top {
-    position: absolute;
-    top: 25px;
-    right: 28px;
-  }
-
-  .right-bottom {
-    position: absolute;
-    bottom: 25px;
-    right: 28px;
+  .main-area {
+    width: 100%;
   }
 }
 </style>

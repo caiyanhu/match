@@ -8,7 +8,11 @@ const isDialogVisible = ref(true);
 // 当前提示语的序号
 const currentPromptIndex = ref(1);
 
-const prompts = ["aaaaaaaaaaa", "bbbbbbbbbbb", "ccccccccccc"];
+const prompts = [
+  "夺宝人进入宝库，打开一个宝箱可以获得对应的金币，打开多个宝箱可以累计获得金币；",
+  "bbbbbbbbbbb",
+  "ccccccccccc",
+];
 
 const clickRobot = () => {
   isDialogVisible.value = true;
@@ -67,8 +71,8 @@ const handleNext = () => {
   position: absolute;
   bottom: 0;
   .robot {
-    width: 396px;
-    height: 396px;
+    width: 227px;
+    height: 235px;
     cursor: pointer;
 
     svg {
@@ -123,6 +127,8 @@ const handleNext = () => {
         width: 100%;
         height: 100%;
         text-align: left;
+        font-size: 32px;
+        font-family: 'LCD';
         color: #fff;
       }
 
